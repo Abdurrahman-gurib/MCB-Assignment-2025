@@ -33,20 +33,32 @@ This project is a full-stack web application designed for managing suppliers, or
 ### Backend (MCBBackend)
 - **Framework**: ASP.NET Core Web API
 - **Database**: MSSQL Server
-- **Authentication**: JWT-based authentication
+- **Authentication Security**: JWT-based authentication
 - **Data Migration**: SQL scripts
 - **Reporting**: API endpoints
 - **API Documentation**: Swagger UI
+- **Unit Test**: NUnit
+- ![image](https://github.com/user-attachments/assets/dc289880-ad01-4e25-b63c-aca62b10fb72)
+
 
 ### Frontend (MCBFrontend)
 - **Framework**: Angular
 - **UI Components**: HTML, CSS, TypeScript
 - **Services**: API integration with backend
+- **Unit Test**: Jasmine and JEST NPX
+- **JWT Token Security**: HMAC-SHA256 with a secret key, the JWT has a short expiration time (15 minutes) to limit its validity period
+- **Refresh Token Generation**: A GUID is used as a refresh token.
+- ![image](https://github.com/user-attachments/assets/43a99061-f5b0-4ff9-a7dc-69b0dab43615)
+
+
 
 ### Database
 - **Database Engine**: Microsoft SQL Server (MSSQL)
 - **Normalization**: Properly structured schema
 - **Data Migration**: SQL scripts for moving data from legacy tables xls format
+- ![image](https://github.com/user-attachments/assets/b4344926-a6b4-4e63-a228-a94a6ab860b2)
+
+- 
 
 ---
 ## Backend Features
