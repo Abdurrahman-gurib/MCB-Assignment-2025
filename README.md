@@ -119,7 +119,7 @@ This project is a full-stack web application designed for managing suppliers, or
 2. Configure connection string in `appsettings.json`
 
 ---
-## Future Improvements
+## Highlights
 - Implement role-based access control (RBAC)
 - Improve UI design with Material UI
 - Add unit tests for frontend (JEST & Jasmine) & backend
