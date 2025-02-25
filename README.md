@@ -3,6 +3,24 @@ Abdurrahman Noor-Ul-Haqq Gurib
 
 # MCB Software Engineering Assignment
 
+# Overview of the MCB Group Assignment Software Engineer
+The assignment consists of several key tasks, including creating the “BCM_ORDER_MGT” table, developing a normalized database schema, and implementing various stored procedures for data migration and reporting. I ensured that the code followed best practices regarding clean code, unit tests, error handling, reusability, and performance optimization.
+
+# Extra Work
+In addition to the required tasks, I developed a full-stack web application designed for managing suppliers, orders, and invoices. Here are some key highlights:
+
+- **Backend**: Built using ASP.NET Core Web API, with JWT-based authentication, SQL scripts for data migration, and Swagger UI for API documentation.
+- **Frontend**: Developed with Angular 18, featuring user authentication, a dashboard for suppliers, orders, and invoices, and dynamic data fetching.
+- **Database**: Utilized Microsoft SQL Server with a properly normalized schema, implementing stored procedures for report generation and financial analysis.
+
+- # Additional Features
+- Included role-based access control (RBAC), improved UI design using Material UI, and unit tests for both frontend (using JEST & Jasmine) and backend.
+
+I have focused on delivering a comprehensive solution that not only meets the assignment requirements but also demonstrates my ability to build a full-stack application.
+
+Thank you for considering my submission. Please let me know if you have any questions or require further information.
+
+
 ## Overview
 This project is a full-stack web application designed for managing suppliers, orders, and invoices. It includes:
 - A **backend** built with ASP.NET Core.
