@@ -1,0 +1,30 @@
+<div style="max-width: 500px; margin: 0 auto; text-align: center; padding: 20px;">
+    <h2>Login</h2>
+    <h3 style="font-weight: normal; font-size: 1em; margin-bottom: 20px;">
+      Assignment | Software Engineer (Core Banking - Payments) | Tech. Engineering Chapter | Technology SBU | February 2025
+    </h3>
+  
+    <form (ngSubmit)="login()" style="text-align: left;">
+      <label for="username">Username:</label>
+      <input id="username" type="text" [(ngModel)]="credentials.username" name="username" required 
+             style="width: 100%; padding: 10px; margin: 5px 0 15px 0; border: 1px solid #ccc; border-radius: 5px;"/>
+  
+      <label for="password">Password:</label>
+      <input id="password" type="password" [(ngModel)]="credentials.password" name="password" required 
+             style="width: 100%; padding: 10px; margin: 5px 0 10px 0; border: 1px solid #ccc; border-radius: 5px;"/>
+  
+      <!-- Forgot Password Link -->
+      <div style="text-align: right; margin-bottom: 15px;">
+        <a href="#" (click)="forgotPassword()" style="text-decoration: none; color: #00509e; font-size: 0.9em;">Forgot Password?</a>
+      </div>
+  
+      <!-- Login Button -->
+      <button type="submit" 
+              style="width: 100%; padding: 10px; background: linear-gradient(135deg, #00509e, #003366); border: none; border-radius: 5px; color: white; font-size: 1.1em; cursor: pointer; transition: background 0.3s ease;">
+        Login
+      </button>
+    </form>
+  
+    
+  </div>
+  

@@ -1,0 +1,124 @@
+<div class="dashboard-container">
+  <h1>Dashboard Two</h1>
+
+  <!-- Display error message if present -->
+  <div *ngIf="errorMessage" class="error">
+    {{ errorMessage }}
+  </div>
+
+  <!-- Loading state if data is not loaded -->
+  <div *ngIf="!(medianOrders?.length && orderManagement?.length && ordersReport?.length && supplierOrdersSummary?.length)">
+    <p>Loading data...</p>
+  </div>
+
+  <!-- Median Orders Table -->
+  <section *ngIf="medianOrders?.length">
+    <h2>Median Orders</h2>
+    <table>
+      <thead>
+        <tr>
+          <th>Order Reference</th>
+          <th>Order Date</th>
+          <th>Supplier Name</th>
+          <th>Order Total Amount</th>
+          <th>Order Status</th>
+          <th>Invoice References</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let medianOrder of medianOrders">
+          <td>{{ displayValue(medianOrder.orderReference) }}</td>
+          <td>{{ medianOrder.orderDate ? (medianOrder.orderDate | date:'shortDate') : '-' }}</td>
+          <td>{{ displayValue(medianOrder.supplierName) }}</td>
+          <td>{{ medianOrder.orderTotalAmount ? (medianOrder.orderTotalAmount | currency) : '-' }}</td>
+          <td>{{ displayValue(medianOrder.orderStatus) }}</td>
+          <td>{{ displayValue(medianOrder.invoiceReferences) }}</td>
+        </tr>
+      </tbody>
+    </table>
+  </section>
+
+  <!-- Order Management Table -->
+  <!-- <section *ngIf="orderManagement?.length">
+    <h2>Order Management</h2>
+    <table>
+      <thead>
+        <tr>
+          <th>Order Ref</th>
+          <th>Order Date</th>
+          <th>Supplier Name</th>
+          <th>Order Total Amount</th>
+          <th>Status</th>
+          <th>Invoice References</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let order of orderManagement">
+          <td>{{ displayValue(order.orderRef) }}</td>
+          <td>{{ order.orderDate ? (order.orderDate | date:'shortDate') : '-' }}</td>
+          <td>{{ displayValue(order.supplierName) }}</td>
+          <td>{{ order.orderTotalAmount ? (order.orderTotalAmount | currency) : '-' }}</td>
+          <td>{{ displayValue(order.orderStatus) }}</td>
+          <td>{{ displayValue(order.invoiceReferences) }}</td>
+        </tr>
+      </tbody>
+    </table>
+  </section> -->
+
+  <!-- Orders Report Table -->
+  <section *ngIf="ordersReport?.length">
+    <h2>Orders Report</h2>
+    <table>
+      <thead>
+        <tr>
+          <th>Region</th>
+          <th>Order Reference</th>
+          <th>Order Period</th>
+          <th>Supplier Name</th>
+          <th>Order Total Amount</th>
+          <th>Order Status</th>
+          <th>Invoice Reference</th>
+          <th>Invoice Total Amount</th>
+          <th>Action</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let report of ordersReport">
+          <td>{{ displayValue(report.Region) }}</td>
+          <td>{{ displayValue(report.OrderReference) }}</td>
+          <td>{{ displayValue(report.OrderPeriod) }}</td>
+          <td>{{ displayValue(report.SupplierName) }}</td>
+          <td>{{ report.OrderTotalAmount ? (report.OrderTotalAmount | currency) : '-' }}</td>
+          <td>{{ displayValue(report.OrderStatus) }}</td>
+          <td>{{ displayValue(report.InvoiceReference) }}</td>
+          <td>{{ report.InvoiceTotalAmount ? (report.InvoiceTotalAmount | currency) : '-' }}</td>
+          <td>{{ displayValue(report.Action) }}</td>
+        </tr>
+      </tbody>
+    </table>
+  </section>
+
+ <!-- Supplier Orders Summary Table -->
+ <section *ngIf="supplierOrdersSummary?.length">
+    <h2>Supplier Orders Summary</h2>
+    <table>
+      <thead>
+        <tr>
+          <th>Month</th>
+          <th>Supplier Name</th>
+          <th>Total Orders</th>
+          <th>Order Total Amount</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let summary of supplierOrdersSummary">
+          <td>{{ displayValue(summary.Month) }}</td>
+          <td>{{ displayValue(summary.SupplierName) }}</td>
+          <td>{{ displayValue(summary.TotalOrders) }}</td>
+          <td>{{ summary.OrderTotalAmount ? (summary.OrderTotalAmount | currency) : '-' }}</td>
+        </tr>
+      </tbody>
+    </table>
+  </section>
+</div>
+
